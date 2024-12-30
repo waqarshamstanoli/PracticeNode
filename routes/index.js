@@ -67,7 +67,7 @@ router.get('/', (req, res) => {
   if(process.env.MONGODB_URI){
     res.send('Hello, wonnmnmnmmrld!');
   }
-  
+  res.send('Hello, wonnmnmnmmrld!');
   console.error('Error during login:');
 });
 
