@@ -64,7 +64,10 @@ const token = jwt.sign({ userId: user._id }, secretKey, { expiresIn: '1h' });
 
 
 router.get('/', (req, res) => {
-  res.send('Hello, world!',process.env.MONGODB_URI);
+  if(process.env.MONGODB_URI){
+    res.send('Hello, world!');
+  }
+  
   console.error('Error during login:');
 });
 
