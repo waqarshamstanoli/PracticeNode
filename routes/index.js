@@ -65,6 +65,7 @@ const token = jwt.sign({ userId: user._id }, secretKey, { expiresIn: '1h' });
 
 router.get('/', (req, res) => {
   res.send('Hello, world!');
+  console.error('Error during login:');
 });
 
 
