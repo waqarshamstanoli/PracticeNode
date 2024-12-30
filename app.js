@@ -13,7 +13,7 @@ app.use(cors());
 const PORT = process.env.PORT || 3000;
 
 mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Connected to MongoDB'))
+  .then(() => res.send('Hello, connected!'))
   .catch(err => console.error('Could not connect to MongoDB:', err));
 
 app.use('/', routes);
